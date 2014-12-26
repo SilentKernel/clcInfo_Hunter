@@ -58,7 +58,6 @@ local function GetStatus()
 
 	-- take a guess at whether we're facing a boss
 	emod.s_boss = emod:GetTargetIsABoss()
-
 end
 
 local function SurvivalRotation()
