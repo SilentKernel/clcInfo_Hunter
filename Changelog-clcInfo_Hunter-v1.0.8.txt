@@ -1,0 +1,13 @@
+tag v1.0.8
+3b8c84f9d7950d369e781b8b2ee1f4daa9b46bc7
+Matt Wright <matt@sysctl.co.uk>
+2014-10-21 00:37:26 -0700
+
+Fixed basic problems, updated MM for new code style.
+
+
+--------------------
+
+Matt Wright:
+	- Marks reenabled, feels bad though.
+	- Fix BM and Survival, disable Marks.

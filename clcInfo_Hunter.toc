@@ -1,0 +1,18 @@
+## Interface: 60000
+## Title: clcInfo_Hunter
+## Version: 0.2
+## X-Curse-Packaged-Version: v1.0.8
+## X-Curse-Project-Name: clcInfo_Hunter
+## X-Curse-Project-ID: clcinfo_hunter
+## X-Curse-Repository-ID: wow/clcinfo_hunter/mainline
+embeds.xml
+utils.lua
+
+clcInfo_Hunter.lua
+abilities\hunter.lua
+abilities\beastmastery.lua
+abilities\marksmanship.lua
+abilities\survival.lua
+specs\marksmanship.lua
+specs\beastmastery.lua
+specs\survival.lua
