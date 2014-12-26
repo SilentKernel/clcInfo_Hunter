@@ -51,11 +51,7 @@ local function GetStatus()
 	emod.s_rcss = emod:GetRecentSteadyShotCount()
 
 	-- take a guess at whether we're facing a boss
-			if ( UnitClassification("target") == "worldboss" ) then
-			emod.s_boss = true
-		else
-			emod.s_boss = false
-		end
+	emod.s_boss = emod:GetTargetIsABoss()
 end
 
 local function MarksRotation()

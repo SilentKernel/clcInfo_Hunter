@@ -22,6 +22,7 @@ function emod:GetBuffStacks(buff)
 		return 0
 	else
 		return count
+	end
 end
 
 function emod:GetTargetDebuff(debuff)
@@ -36,4 +37,10 @@ function emod:GetTargetDebuff(debuff)
 	return left
 end
 
+function emod:GetTargetIsABoss()
+	if (UnitClassification("target") == "worldboss") then
+		return true
+	else
+		return false
+	end
 end

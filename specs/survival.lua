@@ -57,12 +57,8 @@ local function GetStatus()
 	end
 
 	-- take a guess at whether we're facing a boss
+	emod.s_boss = emod:GetTargetIsABoss()
 
-		if ( UnitClassification("target") == "worldboss" ) then
-			emod.s_boss = true
-		else
-			emod.s_boss = false
-		end
 end
 
 local function SurvivalRotation()
