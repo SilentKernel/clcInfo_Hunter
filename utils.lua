@@ -38,7 +38,8 @@ function emod:GetTargetDebuff(debuff)
 end
 
 function emod:GetTargetIsABoss()
-	if (UnitClassification("target") == "worldboss") then
+	if (UnitLevel("target") == -1) then
+		--print("is a boss")
 		return true
 	else
 		return false
