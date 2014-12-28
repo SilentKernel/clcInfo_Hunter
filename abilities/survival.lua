@@ -29,6 +29,7 @@ emod:RegisterSpecialisation(3, {
 			if emod.last_ability == emod.spells["Explosive Shot"] then return 100 end
 			-- femaledwarf suggests that KC should be waited on if there's
 			-- 0.3s or less before we'd have the appropriate amount of focus
+			--print(emod:GetCooldown(emod.spells["Explosive Shot"]))
 			local cd = emod:GetCooldown(emod.spells["Explosive Shot"])
 			if cd <= 0.3 and emod:UpdateFocus(emod:GetFocus(), 0.3) >= 25 then return 0 end
 			return cd
@@ -39,7 +40,7 @@ emod:RegisterSpecialisation(3, {
 				emod.s_lnl = max(0, emod.s_lnl - 1)
 				emod.s_esc = 1
 			else
-				emod:UseFocus(25)
+				emod:UseFocus(15)
 				emod.s_esc = 0
 			end
 		end,
