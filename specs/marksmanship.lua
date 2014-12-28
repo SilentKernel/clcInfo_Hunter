@@ -49,9 +49,6 @@ local function GetStatus()
 	emod.focus = UnitPower("player")
 	emod.maxf = UnitPowerMax("player")
 	emod.s_rcss = emod:GetRecentSteadyShotCount()
-
-	-- take a guess at whether we're facing a boss
-	emod.s_boss = emod:GetTargetIsABoss()
 end
 
 local function MarksRotation()

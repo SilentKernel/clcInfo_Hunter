@@ -47,8 +47,6 @@ local function GetStatus()
 	emod.s_bw = emod:GetBuff(emod.auras["Bestial Wrath"])
 	emod.s_frenzy = emod:GetBuffStacks(emod.auras["Frenzy"])
 
-	-- take a guess at whether we're facing a boss
-	emod.s_boss = emod:GetTargetIsABoss()
 end
 
 local function BeastRotation()

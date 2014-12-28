@@ -5,6 +5,7 @@ if class ~= "HUNTER" then return end
 -- to update their state
 
 local emod = clcInfo.env
+emod.s_boss = false
 
 function emod:GetBuff(buff)
 	local left = 0
@@ -37,11 +38,21 @@ function emod:GetTargetDebuff(debuff)
 	return left
 end
 
-function emod:GetTargetIsABoss()
-	if (UnitLevel("target") == -1) then
+function emod:SetIsABoss()
+	--print(UnitClassification("target"))
+	if (UnitLevel("target") == -1 or UnitClassification("target") == "worldboss") then
 		--print("is a boss")
-		return true
+		emod.s_boss = true
 	else
-		return false
+		emod.s_boss = false
 	end
 end
+
+local targetCheckFrame = CreateFrame("Frame", nil, UIParent)
+targetCheckFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
+
+targetCheckFrame:SetScript("OnEvent", function(self, event, unit, name, rank, line, id)
+	if event == "PLAYER_TARGET_CHANGED" then
+		emod:SetIsABoss()
+	end
+end)

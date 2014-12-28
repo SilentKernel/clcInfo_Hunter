@@ -55,9 +55,6 @@ local function GetStatus()
 	if emod.s_ss == 0 and emod:GetRecentSerpentSting() then
 		emod.s_ss = 15.0
 	end
-
-	-- take a guess at whether we're facing a boss
-	emod.s_boss = emod:GetTargetIsABoss()
 end
 
 local function SurvivalRotation()
